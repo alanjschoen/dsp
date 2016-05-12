@@ -67,6 +67,6 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> I chose Sublime because it has a clean, simple interface, and I can activate vi mode for editing without the mouse.  I also like the variety of plugins available.  I think it's a nice combination of simplicity and flexibility.  Plus, I already paid for it a year ago.  Some useful keyboard shortcuts are `cmd-[` and `cmd-]` for changing indentation, `cmd-/` and `cmd-t` for commenting and uncommenting, and `esc` to enter command mode (with vi mode enabled in preferences).
+>> I chose Sublime as my main text editor because it has a clean, simple interface, and I can activate vi mode for editing without the mouse.  I also like the variety of plugins available.  I think it's a nice combination of simplicity and flexibility.  Plus, I already paid for it a year ago.  Some useful keyboard shortcuts are `cmd-[` and `cmd-]` for changing indentation, `cmd-/` and `cmd-t` for commenting and uncommenting, and `esc` to enter command mode (with vi mode enabled in preferences).  I have read that it is possible to use sublime to make a ful python IDE, but I wasn't able to get this to work.  So I plan to use Spyder when I'm tweaking visualizations.
 
  
