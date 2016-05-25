@@ -13,22 +13,31 @@ these in a couple of hours.
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 1. du [-hs]: see size of directory contents. -h for human readable, -s for summary.
+> > 2. cut: remove or isolate columns in CSV
+> > 3. head/tail: get beginning or end of file
+> > 4. tr: string replace 
+> > 5. sort: sort lines
+> > 6. uniq: get rid of repeating lines (order matters)
+> > 7. find: search within directory
+> > 8. grep: search files with regular expressions
+> > 9. sed: regular expression operations on streams
+> > 10. awk: operate on structured data with regular expressions
+
 
 ---
 
 ###Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls`  
-`ls -a`  
-`ls -l`  
-`ls -lh`  
-`ls -lah`  
-`ls -t`  
-`ls -Glp`  
+> > `ls`: list directory contents 
+> > `ls -a`: include hidden files
+> > `ls -l`: show results in list form
+> > `ls -lh`:  list for with readable file size
+> > `ls -lah`: list form including hidden files with readable file size
+> > `ls -t`: sort by time and date
+> > `ls -Glp`: list form with directories formatted with / and coloring
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
 
 ---
 
@@ -36,7 +45,13 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > -L: de-reference symbolic links
+> > -m: comma-separated list of names
+> > -q: show ? for non-printing chars
+> > -R: recurse into subdirectories
+> > -u: show file access time
+> > -x: justify as columns
+> > -1: put each file on a new line
 
 ---
 
@@ -44,7 +59,7 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > transforms piped data into command line arguments.  Useful for commands like `rm` and `cp` that don`t accept piped input
 
  
 
