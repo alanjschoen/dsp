@@ -18,11 +18,12 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-
     if count < 10:
         return str(count)
     else:
         return 'many'
+
+
 def both_ends(s):
     """
     Given a string s, return a string made of the first 2 and the last
@@ -148,8 +149,7 @@ def front_back(a, b):
     """
     aFront = a[:(len(a)+1)/2]
     aBack = a[(len(a)+1)/2:]
-
     bFront = b[:(len(b)+1)/2]
     bBack = b[(len(b)+1)/2:]
-
+    
     return aFront + bFront + aBack + bBack
