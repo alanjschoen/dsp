@@ -13,16 +13,16 @@ these in a couple of hours.
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > 1. du [-hs]: see size of directory contents. -h for human readable, -s for summary.
-> > 2. cut: remove or isolate columns in CSV
-> > 3. head/tail: get beginning or end of file
-> > 4. tr: string replace 
-> > 5. sort: sort lines
-> > 6. uniq: get rid of repeating lines (order matters)
-> > 7. find: search within directory
-> > 8. grep: search files with regular expressions
-> > 9. sed: regular expression operations on streams
-> > 10. awk: operate on structured data with regular expressions
+> > 1. `du -hs`: see size of directory contents. `-h` for human readable, `-s` for summary.
+> > 2. `cut`: remove or isolate columns in CSV
+> > 3. `head`/`tail`: get beginning or end of file
+> > 4. `tr`: string replace 
+> > 5. `sort`: sort lines
+> > 6. `uniq`: get rid of repeating lines (order matters)
+> > 7. `find`: search within directory
+> > 8. `grep`: search files with regular expressions
+> > 9. `sed`: regular expression operations on streams
+> > 10. `awk`: operate on structured data with regular expressions
 
 
 ---
@@ -61,7 +61,7 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > transforms piped data into command line arguments.  Useful for commands like `rm` and `cp` that don`t accept piped input
+> > transforms piped data into command line arguments.  Useful for commands like `rm` and `cp` that don't accept piped input
 
  
 
