@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Tuples are static, while lists are dynamic.  Lists support operations like appending, deleting, changing values, pushing, and popping.  This makes them very useful for many things, but also makes their contents unpredictable.  Tuples work as dictionary keys because they are static, and they support content comparisons.  When comparing lists, you are really comparing memory locations.  When comparing tuples, you are comparing contents.
 
 ---
 
@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists are ordered and content-agnostic.  Sets are unordered and enforce rules about their contents.  For instance, each element in a set must be unique.  These restrictions allow for faster lookup times, which gives much better performance for many operations.
 
 ---
 
@@ -28,7 +28,7 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> lambda declares an anonymous function.  `f = lambda x: x[::-1]` creates a function handle that reverses the order of a list, and stores the handle in the variable `f`.  I can use this handle with the `sorted` function to sort a list of strings by the last letter instead of the first letter `sorted("Non Impediti Ratione Cogitationis".split(), key=f)`.
 
 ---
 
@@ -36,7 +36,10 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions allow you to build a list by collecting the output of a `for` loop.  For instance, `[pow(x,2) for x in range(5)]` creates a list of the squares of numbers from 0 to 4.  The list comprehension `[f(x) for x in arr]` is equivalent to `map(f, arr)`.  Similaryly, `[x for x in arr if f(x)]` is equivalent to `filter(f, arr)`.
+>> List comprehensions let you string together operations in a better way.  `[w1 for w1 in par1.split() for w2 in par2.split() if w1==w2]` lets us find all of the matching words in two paragraphs `par1` and `par2` (this is not an efficient solution).  We could use `map` and `filter` to do this, but it would be unreadable: `filter(lambda y: any(map(lambda x: x==y, par2.split())), par1.split())`.
+>> Set comprehensions work in a similar way to list comprehensions, but using curly brackets.  `{x for x in arr if x%3==0}` creates a set out numbers in the iterable `arr` which are divisible by 3.
+>> Dictionary comprehensions `{value: list2.index(value) for value in list1 if value in list2}` returns a dictionary mapping the values in `list1` to their indices in `list2`.
 
 ---
 
