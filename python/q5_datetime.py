@@ -1,4 +1,5 @@
 from datetime import datetime
+# https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior
 
 pf = "%m/%d/%y"
 
