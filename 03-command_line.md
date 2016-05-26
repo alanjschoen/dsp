@@ -30,13 +30,13 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 ###Q2.  List Files in Unix   
 
 What do the following commands do:  
-> > `ls`: list directory contents 
-> > `ls -a`: include hidden files
-> > `ls -l`: show results in list form
-> > `ls -lh`:  list for with readable file size
-> > `ls -lah`: list form including hidden files with readable file size
-> > `ls -t`: sort by time and date
-> > `ls -Glp`: list form with directories formatted with / and coloring
+> > - `ls`: list directory contents 
+> > - `ls -a`: include hidden files
+> > - `ls -l`: show results in list form
+> > - `ls -lh`:  list for with readable file size
+> > - `ls -lah`: list form including hidden files with readable file size
+> > - `ls -t`: sort by time and date
+> > - `ls -Glp`: list form with directories formatted with / and coloring
 
 
 ---
@@ -45,13 +45,15 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > -L: de-reference symbolic links
-> > -m: comma-separated list of names
-> > -q: show ? for non-printing chars
-> > -R: recurse into subdirectories
-> > -u: show file access time
-> > -x: justify as columns
-> > -1: put each file on a new line
+> > I picked 7.
+> >
+> > 1. `-L`: de-reference symbolic links
+> > 2. `-m`: comma-separated list of names
+> > 3. `-q`: show ? for non-printing chars
+> > 4. `-R`: recurse into subdirectories
+> > 5. `-u`: show file access time
+> > 6. `-x`: justify as columns
+> > 7. `-1:` put each file on a new line
 
 ---
 
