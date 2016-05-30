@@ -13,27 +13,22 @@ class Season:
     teams = []
     data = []
     def __init__(self, fname):
-        f = open(fname, 'rt')
-        try:
-            reader = csv.reader(f)
-            self.cols = reader.next()[1:]
-            for row in reader:
-                self.teams.append(row[0])
-                self.data.append(map(int, row[1:]))
-        finally:
-            f.close()
+        with open(fname) as data:
+                reader = csv.DictReader(data)
+                for row in reader:
+                    self.teams.append(row['Team'])
+                    self.data.append(row)
 
     def get_min_score_difference_team(self):
         scoreDiff = []
         for tName in self.teams:
             tData = self.get_team(tName)
-            teamScoreDiff = abs(tData['Goals'] - tData['Goals Allowed'])
+            teamScoreDiff = abs(int(tData['Goals']) - int(tData['Goals Allowed']))
             scoreDiff.append(teamScoreDiff)
         return self.teams[scoreDiff.index(min(scoreDiff))]
 
     def get_team(self, team_name):
-        d = self.data[self.teams.index(team_name)]
-        return {c: v for (c,v) in zip(self.cols, d)}
+        return self.data[self.teams.index(team_name)]
 
 fname = 'football.csv'
 season = Season(fname)
