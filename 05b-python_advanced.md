@@ -37,7 +37,8 @@ JD      | 1
 
 ####Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
->> I found three unique titles.  Here they are, with their frequency:  
+>> I found three unique titles.  Here they are, with their frequency:
+
 >> Title | Count
 --- | ---
 Assistant Professor  | 12
@@ -52,10 +53,13 @@ Associate Professor  | 12
 ####Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
 >> There are 4 unique domains:  
->> email.chop.edu  
->> upenn.edu  
->> cceb.med.upenn.edu  
->> mail.med.upenn.edu  
+
+>> Domain | Count
+--- | ---
+email.chop.edu | 1
+upenn.edu | 12
+cceb.med.upenn.edu | 1
+mail.med.upenn.edu | 23
 
 Place your code in this file: [advanced_python_regex.py](python/advanced_python_regex.py)
 

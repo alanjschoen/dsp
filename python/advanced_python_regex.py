@@ -71,4 +71,7 @@ domains = [e.split('@')[1] for e in emails]
 domains_unique = list(set(domains))
 
 print "Number of unique domains: %d"%(len(domains_unique))
-for d in domains_unique: print(">> %s  "%d)
+print ">> Domain | Count"
+print "--- | ---"
+for d in domains_unique: 
+    print("%s | %d"%(d,domains.count(d)))
