@@ -17,51 +17,34 @@ import string
 
 printable = set(string.printable)
 
-
-fname = "text_samples/cat_in_hat.txt"
-fname = "text_samples/neuromancer.txt"
-fname = "text_samples/green_eggs_ham.txt"
 fname = "text_samples/wasteland.txt"
+fname = "text_samples/cat_in_hat.txt"
+fname = "text_samples/green_eggs_ham.txt"
+
 #fname = raw_input()
 
 output_len = 60
 #output_len = input()
 
-chain_n = 4
+chain_n = 3
 
 text = open(fname, 'r').read()
-text = ''.join([let if let in printable else ' ' for let in text])
+text = text.lower()
+#text = ''.join([let if let in printable else ' ' for let in text])
 text = text.replace("'", "")
 text = text.replace("`", "")
 text = text.replace("-", "")
 
-### PART 1: Start the text ###
-# Divide text into lines to find most common strings of words that start new lines
-openers = dict()
-lines = text.split('\n')
-validCount = 0
-for l in lines:
-    words = l.split()
-    if len(words) >= chain_n:
-        op = tuple(words[:chain_n])
-        if op in openers:
-            openers[op] += 1
-        else:
-            openers[op] = 1
-        validCount += 1
 
-# Pick first few words from most common line openers
-randno = randint(1, validCount)
-pos = 0
-for op in openers.keys():
-    pos += openers[op]
-    if pos >= randno:
-        output = list(op)
-        break
-
-### PART 2: generate the rest ###
 # Get all words
 words = text.split()
+
+### PART 1: Start the text ###
+randno = randint(0,len(words)-chain_n)
+output = words[randno:randno+chain_n]
+
+### PART 2: generate the rest ###
+
 
 while len(output) < output_len:
     state = output[-chain_n:]
@@ -69,7 +52,7 @@ while len(output) < output_len:
 
     # Collect stats on past states like this
     validCount = 0
-    for i in range(0,len(words)-chain_n-1):
+    for i in range(len(words)-chain_n-1):
         isValid = True
         for j in range(chain_n):
             isValid &= state[j]==words[i+j]
