@@ -10,8 +10,13 @@ degrees_raw = [d for l in df['degree'].values for d in l.split()]
 # Convert to lower case and remove periods for matching
 degrees_low = [d.lower().replace('.', '') for d in degrees_raw]
 
+# Get unique degrees
+degrees_unique = set(degrees_low)
+
+print "Number of unique degrees: %d"%(len(degrees_unique))
+
 # Process each unique degree
-for d in set(degrees_low):
+for d in degrees_unique:
 
     # Find all matching degrees in their original format
     matches = [dr for (dl,dr) in zip(degrees_low, degrees_raw) if dl==d]
