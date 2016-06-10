@@ -19,13 +19,26 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 
 ####Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
->> REPLACE THIS WITH YOUR RESPONSE
-
+>> I isolated degrees by looking in the 'degree' column, and then splitting the contents by spaces.  Then I converted each degree to lower case and removed periods to compare the letter sequences.  Then I linked these unique strings back to their original formatting, and counted the most common format.  
+>> I found 9 unique space-sepearated character combinations in the 'degrees' column.  They are shown below with their counts.  
+>> MD: 1  
+>> MA: 1  
+>> Sc.D.: 6  
+>> B.S.Ed.: 1  
+>> Ph.D.: 31  
+>> 0: 1  
+>> MPH: 2  
+>> M.S.: 2  
+>> JD: 1  
+>>  
+>> One of these values, '0', appears to be bad data.  On closer inspection, I see that this value belongs to my good friend Taki "Russell" Shinohara.  I am aware of 3 post-secondary degrees that Taki has earned, none of which is called '0', so I conclude that this is indeed bad data.  So there are 8 unique degrees in this file.  
 
 ####Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
->> REPLACE THIS WITH YOUR RESPONSE
-
+>> I found three unique titles.  Here they are, with their frequency:  
+>> Assistant Professor: 12  
+>> Professor: 13  
+>> Associate Professor: 12  
 
 ####Q3. Search for email addresses and put them in a list.  Print the list of email addresses.
 
