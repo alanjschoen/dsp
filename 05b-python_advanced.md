@@ -21,33 +21,41 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 
 >> I isolated degrees by looking in the 'degree' column, and then splitting the contents by spaces.  Then I converted each degree to lower case and removed periods to compare the letter sequences.  Then I linked these unique strings back to their original formatting, and counted the most common format.  
 >> I found 9 unique space-sepearated character combinations in the 'degrees' column.  They are shown below with their counts.  
->> MD: 1  
->> MA: 1  
->> Sc.D.: 6  
->> B.S.Ed.: 1  
->> Ph.D.: 31  
->> 0: 1  
->> MPH: 2  
->> M.S.: 2  
->> JD: 1  
->>  
->> One of these values, '0', appears to be bad data.  On closer inspection, I see that this value belongs to my good friend Taki "Russell" Shinohara.  I am aware of 3 post-secondary degrees that Taki has earned, none of which is called '0', so I conclude that this is indeed bad data.  So there are 8 unique degrees in this file.  
+
+>> Degree | Count
+--- | ---
+MD      | 1
+MA      | 1
+Sc.D.   | 6
+B.S.Ed. | 1
+Ph.D.   | 31
+MPH     | 2
+M.S.    | 2
+JD      | 1
+
+>> I excluded degrees which did not consist of letters and periods.  There is one such entry in the CSV ("0") belonging to my good friend Taki "Russell" Shinohara.  Also, the number of degrees does not match the number of people because some people have multiple degrees.
 
 ####Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
 >> I found three unique titles.  Here they are, with their frequency:  
->> Assistant Professor: 12  
->> Professor: 13  
->> Associate Professor: 12  
+>> Title | Count
+--- | ---
+Assistant Professor  | 12
+Professor            | 13
+Associate Professor  | 12
 
 ####Q3. Search for email addresses and put them in a list.  Print the list of email addresses.
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> `['bellamys@mail.med.upenn.edu', 'warren@upenn.edu', 'bryanma@upenn.edu', 'jinboche@upenn.edu', 'sellenbe@upenn.edu', 'jellenbe@mail.med.upenn.edu', 'ruifeng@upenn.edu', 'bcfrench@mail.med.upenn.edu', 'pgimotty@upenn.edu', 'wguo@mail.med.upenn.edu', 'hsu9@mail.med.upenn.edu', 'rhubb@mail.med.upenn.edu', 'whwang@mail.med.upenn.edu', 'mjoffe@mail.med.upenn.edu', 'jrlandis@mail.med.upenn.edu', 'liy3@email.chop.edu', 'mingyao@mail.med.upenn.edu', 'hongzhe@upenn.edu', 'rlocalio@upenn.edu', 'nanditam@mail.med.upenn.edu', 'knashawn@mail.med.upenn.edu', 'propert@mail.med.upenn.edu', 'mputt@mail.med.upenn.edu', 'sratclif@upenn.edu', 'michross@upenn.edu', 'jaroy@mail.med.upenn.edu', 'msammel@cceb.med.upenn.edu', 'shawp@upenn.edu', 'rshi@mail.med.upenn.edu', 'hshou@mail.med.upenn.edu', 'jshults@mail.med.upenn.edu', 'alisaste@mail.med.upenn.edu', 'atroxel@mail.med.upenn.edu', 'rxiao@mail.med.upenn.edu', 'sxie@mail.med.upenn.edu', 'dxie@upenn.edu', 'weiyang@mail.med.upenn.edu']`
 
 
 ####Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> There are 4 unique domains:  
+>> email.chop.edu  
+>> upenn.edu  
+>> cceb.med.upenn.edu  
+>> mail.med.upenn.edu  
 
 Place your code in this file: [advanced_python_regex.py](python/advanced_python_regex.py)
 
