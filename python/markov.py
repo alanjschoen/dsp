@@ -20,10 +20,12 @@ printable = set(string.printable)
 fname = "text_samples/wasteland.txt"
 fname = "text_samples/cat_in_hat.txt"
 fname = "text_samples/green_eggs_ham.txt"
+fname = "text_samples/neuromancer.txt"
+
 
 #fname = raw_input()
 
-output_len = 60
+output_len = 50
 #output_len = input()
 
 chain_n = 3
@@ -45,10 +47,12 @@ output = words[randno:randno+chain_n]
 
 ### PART 2: generate the rest ###
 
+# Keep track of the number of times the code actually made a decision
+nbranches = 0
 
 while len(output) < output_len:
     state = output[-chain_n:]
-    history = dict()
+    history = []
 
     # Collect stats on past states like this
     validCount = 0
@@ -57,28 +61,19 @@ while len(output) < output_len:
         for j in range(chain_n):
             isValid &= state[j]==words[i+j]
         if isValid:
-            nextWord = words[i+chain_n]
-            if nextWord in history:
-                history[words[i+chain_n]] += 1
-            else:
-                history[words[i+chain_n]] = 1
-            validCount += 1
+            history.append(words[i+chain_n])
 
-    # Choose random number
-    randno = randint(1, validCount)
+    # Check if this string is unique
+    if len(history) > 1:
+        nbranches += 1
 
-    pastWords = history.keys()
-    pos = 0
-    for w in pastWords:
-        pos += history[w]
-        if pos >= randno:
-            nextWord = w
-            break
-
-    output.append(nextWord)
+    # Make a random choice
+    randno = randint(0, len(history)-1)  
+    output.append(history[randno])
 
 # Print output
 print ' '.join(output)
+print nbranches
 
 
 
