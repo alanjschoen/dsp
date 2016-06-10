@@ -57,6 +57,10 @@ for line in f_in:
 
     # Get degree
     degree = line[1]
+    # degree = re.sub('Ph\.?D\.?', 'Ph.D.', degree, flags=re.IGNORECASE)
+    # degree = re.sub('Sc\.?D\.?', 'Sc.D.', degree, flags=re.IGNORECASE)
+
+    # Get title
     title = re.match('.*Professor', line[2]).group()
     email = line[3]
 
