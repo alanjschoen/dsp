@@ -33,7 +33,7 @@ f_in.close()
 
 # Print first 3 entries
 for k in faculty.keys()[:3]:
-    print "%s: %s  "%(k,faculty[k])
+    print "`%s: %s`  "%(k,faculty[k])
 
 ### Question 7
 print "\nQ7"
@@ -70,4 +70,14 @@ f_in.close()
 
 # Print first 3 entries
 for k in faculty.keys()[:3]:
-    print "%s: %s  "%(k,faculty[k])
+    print "`%s: %s`  "%(k,faculty[k])
+
+### Question 8
+print "\nQ8"
+
+# Sort keys by last name
+keys_sorted = sorted(faculty.keys(), key=lambda k: k[1])
+
+# Print all key/value pairs
+for k in keys_sorted:
+    print "`%s: %s`  "%(k,faculty[k])
