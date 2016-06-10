@@ -61,7 +61,7 @@ for line in f_in:
     email = line[3]
 
     # Add entry to dictionary
-    key = (lastname, firstname)
+    key = (firstname, lastname)
     value = [degree, title, email]
     faculty[key] = value
 
@@ -70,4 +70,4 @@ f_in.close()
 
 # Print first 3 entries
 for k in faculty.keys()[:3]:
-    print "%s: %s"%(k,faculty[k])
+    print "%s: %s  "%(k,faculty[k])
